@@ -4,7 +4,6 @@ import {
   EntityCollectionServiceElementsFactory,
   EntityDefinitionService,
 } from '@ngrx/data';
-import { LazyPostModule } from './lazy-post.module';
 import { LazyPost } from './LazyPost';
 
 @Injectable()
