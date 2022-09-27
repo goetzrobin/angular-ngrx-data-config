@@ -6,7 +6,7 @@ import { LazyPost } from './LazyPost';
 
 @Injectable()
 export class LazyPostDataService extends DefaultDataService<LazyPost> {
-  private baseUrl = '/custom/lazy-posts';
+  private baseUrl = 'https://fictionalapi.com/custom/lazy-posts';
 
   constructor(http: HttpClient, httpUrlGenerator: HttpUrlGenerator) {
     super('LazyPost', http, httpUrlGenerator);

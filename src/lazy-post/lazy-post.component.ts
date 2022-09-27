@@ -33,6 +33,9 @@ export class LazyPostComponent implements OnInit {
   constructor(private lazyPostService: LazyPostService) {}
 
   ngOnInit() {
-    this.lazyPostService.getWithQuery('page=1&size=10');
+    const page = 1;
+    const size = 10;
+    this.lazyPostService.getWithQuery(`page=${page}&size=${size}`);
+    this.lazyPostService.setFilter({ page, size });
   }
 }
