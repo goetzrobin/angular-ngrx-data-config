@@ -20,6 +20,7 @@ const routes: Routes = [
     EntityDataModule,
     LetModule,
   ],
+  declarations: [LazyPostComponent],
   providers: [LazyPostService],
 })
 export class LazyPostModule {}
