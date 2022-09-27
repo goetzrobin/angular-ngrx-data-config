@@ -5,6 +5,7 @@ import {
   EntityDataService,
   EntityDefinitionService,
 } from '@ngrx/data';
+import { Observable } from 'rxjs';
 import { LazyPostDataService } from './lazy-post-data.service';
 import { LazyPost } from './LazyPost';
 
@@ -30,6 +31,8 @@ const metaDataMap = {
 };
 @Injectable()
 export class LazyPostService extends EntityCollectionServiceBase<LazyPost> {
+  public totalPages$: Observable<number> = this.selectors$['totalPages$'];
+  public totalElements$: Observable<number> = this.selectors$['totalElements$'];
   constructor(
     serviceElementsFactory: EntityCollectionServiceElementsFactory,
     eds: EntityDefinitionService,

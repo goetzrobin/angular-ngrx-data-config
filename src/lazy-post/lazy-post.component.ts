@@ -7,11 +7,15 @@ import { LazyPostService } from '../lib/lazy-post-feature/lazy-post.service';
     posts: (posts$ | async) ?? [],
     loading: (loading$ | async),
     loaded: (loaded$ | async),
-    errors: (errors$ | async)
+    errors: (errors$ | async),
+    totalPages: (totalPages$ | async),
+    totalElements: (totalElements$ | async)
   } as ob">
   <h1>Lazy Posts</h1>
   <p> loading: {{ob.loading}} </p>
   <p> loaded: {{ob.loaded}} </p>
+  <p> totalPages: {{ob.totalPages}} </p>
+  <p> totalElements: {{ob.totalElements}} </p>
   <p>posts</p>
   <pre>{{ob.posts | json}}</pre>
 
@@ -29,6 +33,8 @@ export class LazyPostComponent implements OnInit {
   loading$ = this.lazyPostService.loading$;
   loaded$ = this.lazyPostService.loaded$;
   errors$ = this.lazyPostService.errors$;
+  totalPages$ = this.lazyPostService.totalPages$;
+  totalElements$ = this.lazyPostService.totalElements$;
 
   constructor(private lazyPostService: LazyPostService) {}
 

@@ -32,6 +32,7 @@ const routes: Routes = [
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     EntityDataModule.forRoot({}),
+    LazyPostFeatureModule,
   ],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent],
