@@ -10,6 +10,7 @@ export class LazyPostDataService extends DefaultDataService<LazyPost> {
 
   constructor(http: HttpClient, httpUrlGenerator: HttpUrlGenerator) {
     super('LazyPost', http, httpUrlGenerator);
+    // in my use case I inject the API module which deals with configuring the base url based on an injection token. therefore I am using a custom data service instead of customizing the url
   }
 
   public override getWithQuery(
