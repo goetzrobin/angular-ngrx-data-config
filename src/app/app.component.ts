@@ -6,7 +6,7 @@ import { Component, VERSION } from '@angular/core';
   <nav class="main-nav">
     <ul>
       <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/lazy-posts">Lazy Posts</a></li>
+      <li><a routerLink="/lazy-post">Lazy Posts</a></li>
     </ul>
   </nav>
   <router-outlet></router-outlet>`,

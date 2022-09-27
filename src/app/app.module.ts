@@ -17,7 +17,7 @@ const routes: Routes = [
     component: HelloComponent,
   },
   {
-    path: 'lazy-posts',
+    path: 'lazy-post',
     loadChildren: () =>
       import('../lazy-post/lazy-post.module').then((m) => m.LazyPostModule),
   },
