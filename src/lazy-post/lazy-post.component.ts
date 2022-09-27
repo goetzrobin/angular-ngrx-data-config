@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LazyPostService } from './lazy-post.service';
+import { LazyPostService } from '../lib/lazy-post-feature/lazy-post.service';
 
 @Component({
   selector: 'app-lazy-post',
@@ -33,6 +33,6 @@ export class LazyPostComponent implements OnInit {
   constructor(private lazyPostService: LazyPostService) {}
 
   ngOnInit() {
-    this.lazyPostService.getAll();
+    this.lazyPostService.getWithQuery('page=1&size=10');
   }
 }

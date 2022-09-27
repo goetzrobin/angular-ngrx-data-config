@@ -9,6 +9,7 @@ import { EntityDataModule } from '@ngrx/data';
 import { StoreModule } from '@ngrx/store';
 import { HttpClientModule } from '@angular/common/http';
 import { EffectsModule } from '@ngrx/effects';
+import { LazyPostFeatureModule } from '../lib/lazy-post-feature/lazy-post-feature.module';
 
 const routes: Routes = [
   {
@@ -31,6 +32,7 @@ const routes: Routes = [
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     EntityDataModule.forRoot({}),
+    LazyPostFeatureModule,
   ],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent],

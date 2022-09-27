@@ -2,9 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLinkWithHref, RouterModule, Routes } from '@angular/router';
 import { LazyPostComponent } from './lazy-post.component';
-import { EntityDataModule } from '@ngrx/data';
-import { LazyPostService } from './lazy-post.service';
 import { LetModule } from '@ngrx/component';
+import { LazyPostFeatureModule } from '../lib/lazy-post-feature/lazy-post-feature.module';
 
 const routes: Routes = [
   {
@@ -17,10 +16,9 @@ const routes: Routes = [
     CommonModule,
     RouterLinkWithHref,
     RouterModule.forChild(routes),
-    EntityDataModule,
+    LazyPostFeatureModule,
     LetModule,
   ],
   declarations: [LazyPostComponent],
-  providers: [LazyPostService],
 })
 export class LazyPostModule {}
